@@ -18,11 +18,11 @@ import { openModal } from 'redux/contacts/slice';
 export const ContactItem = ({ contact }) => {
   const dispatch = useDispatch();
 
-  const { id, name } = contact;
+  const { _id, name } = contact;
   const { loading } = useContacts();
 
   const handlerDeleteBtn = () => {
-    dispatch(contactsOperations.deleteContact({ id, name }));
+    dispatch(contactsOperations.deleteContact({ _id, name }));
   };
 
   const handleInfoBtn = () => {
@@ -53,7 +53,7 @@ export const ContactItem = ({ contact }) => {
 
 ContactItem.propTypes = {
   contact: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    _id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
   }).isRequired,

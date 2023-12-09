@@ -28,9 +28,9 @@ export const contactsSlice = createSlice({
   initialState,
   reducers: {
     openModal: (state, { payload }) => {
-      state.showModal = payload.id === state.editedContact?.id ? false : true;
+      state.showModal = payload._id === state.editedContact?._id ? false : true;
       state.editedContact =
-        payload.id === state.editedContact?.id ? null : payload;
+        payload._id === state.editedContact?._id ? null : payload;
     },
 
     closeModal: state => {
@@ -62,7 +62,7 @@ export const contactsSlice = createSlice({
       .addCase(deleteContact.fulfilled, (state, { payload }) => {
         state.error = null;
         state.isLoading = false;
-        state.items = state.items.filter(item => item.id !== payload.id);
+        state.items = state.items.filter(item => item._id !== payload);
       })
       .addCase(deleteContact.rejected, handleRejected)
 
@@ -74,7 +74,7 @@ export const contactsSlice = createSlice({
         state.showModal = false;
         state.editedContact = null;
         state.items = state.items.map(item =>
-          item.id !== payload.id ? item : payload
+          item._id !== payload._id ? item : payload
         );
       })
       .addCase(updateContact.rejected, handleRejected);
