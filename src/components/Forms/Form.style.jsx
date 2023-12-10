@@ -8,17 +8,27 @@ import { Link } from 'react-router-dom';
 export const FormStyled = styled(Form)`
   position: ${({ $position }) => (!$position ? 'relative' : $position)};
 
-  width: 400px;
-  padding: 50px;
+  width: 280px;
+  padding: 20px;
+  border-radius: 10px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   display: flex;
+  flex-direction: column;
   gap: 25px;
 
-  flex-direction: column;
+  @media screen and (min-width: 375px) {
+    width: 320px;
+    padding: 25px;
+    border-radius: 12px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 400px;
+    padding: 50px;
+    border-radius: 20px;
+  }
 `;
 
 export const InputWrap = styled.label`
@@ -99,20 +109,16 @@ export const InputStyled = styled(Field)`
 export const Text = styled.p`
   color: ${({ theme }) => theme.colors.white};
 
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   line-height: 1.4;
   font-weight: 400;
+  @media screen and (min-width: 375px) {
+    font-size: 16px;
+  }
 `;
 
-export const StyledLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.white};
-
-  font-size: 16px;
-
-  line-height: 1.4;
-  font-weight: 400;
-`;
+export const StyledLink = styled(Link)``;
 
 //// Form elements ==================================
 export const InvalidInput = styled.div`

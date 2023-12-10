@@ -65,7 +65,7 @@ export const refreshSuccess = data => {
   toast.success(`Welcome back ${toCapitalize(data.name)}`);
 };
 export const refreshNoToken = () => {
-  toast.success(`Welcome to the PHONEBOOK app. `);
+  toast.success(`Welcome to the CONTACTBOOK app. `);
 };
 export const refreshError = error => {
   toast.error(`Unknown error... \n ${error.message}`);

@@ -12,7 +12,7 @@ import {
 export const HomeHero = () => {
   return (
     <HeroWrap>
-      <Title>Welcome to the PHONEBOOK app! </Title>
+      <Title>Welcome to the CONTACTBOOK app!</Title>
       <SubTitle> Organize your contacts easily and conveniently. </SubTitle>
       <Text>
         Welcome to the web app where you can create your own contact list.

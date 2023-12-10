@@ -3,13 +3,14 @@ import styled from 'styled-components';
 export const ListWrap = styled.div`
   position: relative;
   max-height: 550px;
-  width: 420px;
+  width: 280px;
+  padding: 20px;
+  border-radius: 10px;
   min-height: 420px;
-  padding: 20px 50px;
 
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
+
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   display: flex;
@@ -17,6 +18,17 @@ export const ListWrap = styled.div`
   flex-direction: column;
 
   align-items: center;
+
+  @media screen and (min-width: 375px) {
+    width: 320px;
+    padding: 25px;
+    border-radius: 12px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 400px;
+    padding: 50px;
+    border-radius: 20px;
+  }
 `;
 
 export const List = styled.ul`
