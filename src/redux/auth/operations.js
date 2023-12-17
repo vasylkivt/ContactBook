@@ -2,7 +2,8 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 import { toastMessage } from 'utils/toast';
-axios.defaults.baseURL = 'https://contact-book-backend-gs28.onrender.com';
+axios.defaults.baseURL = 'https://inquisitive-smock-seal.cyclic.app';
+// axios.defaults.baseURL = 'https://contact-book-backend-gs28.onrender.com';
 // axios.defaults.baseURL = 'http://localhost:1618';
 const AUTH_ENDPOINTS = {
   register: '/api/auth/register',

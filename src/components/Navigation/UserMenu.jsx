@@ -5,15 +5,23 @@ import { useAuth } from 'hooks';
 import { Button } from 'components';
 import { StyledNavLink, UserName } from './Nav.style';
 
-export const UserMenu = () => {
+export const UserMenu = ({ setOnShow }) => {
   const dispatch = useDispatch();
   const { user } = useAuth();
 
   return (
     <>
-      <StyledNavLink to="/profile">User Profile</StyledNavLink>
+      <StyledNavLink onClick={() => setOnShow(false)} to="/profile">
+        User Profile
+      </StyledNavLink>
       <UserName>{user.name}</UserName>
-      <Button type="button" onClick={() => dispatch(authOperations.logout())}>
+      <Button
+        type="button"
+        onClick={() => {
+          setOnShow(false);
+          dispatch(authOperations.logout());
+        }}
+      >
         Logout
       </Button>
     </>

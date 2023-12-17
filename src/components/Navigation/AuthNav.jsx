@@ -1,10 +1,14 @@
 import { StyledNavLink } from './Nav.style';
 
-export const AuthNav = () => {
+export const AuthNav = ({ setOnShow }) => {
   return (
     <>
-      <StyledNavLink to="/login">Login</StyledNavLink>
-      <StyledNavLink to="/register">Register</StyledNavLink>
+      <StyledNavLink onClick={() => setOnShow(false)} to="/login">
+        Login
+      </StyledNavLink>
+      <StyledNavLink onClick={() => setOnShow(false)} to="/register">
+        Register
+      </StyledNavLink>
     </>
   );
 };
