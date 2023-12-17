@@ -15,6 +15,8 @@ export const Wrap = styled.div`
 `;
 
 export const Header = styled.header`
+  position: relative;
+  z-index: 1;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 2px;
