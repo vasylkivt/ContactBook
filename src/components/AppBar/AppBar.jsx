@@ -32,10 +32,16 @@ export const AppBar = () => {
         <NavWrap>
           <Wrap>
             <Logo />
-            {screenWidth > 768 ? <MainNav /> : null}
+            {screenWidth > 768 ? <MainNav setOnShow={setOnShowMenu} /> : null}
           </Wrap>
           {screenWidth > 768 ? (
-            <Wrap>{!isLoggedIn ? <AuthNav /> : <UserMenu />}</Wrap>
+            <Wrap>
+              {!isLoggedIn ? (
+                <AuthNav setOnShow={setOnShowMenu} />
+              ) : (
+                <UserMenu setOnShow={setOnShowMenu} />
+              )}
+            </Wrap>
           ) : (
             <div onClick={() => setOnShowMenu(p => !p)}>
               <BurgerButton isOpen={onShowMenu} />
