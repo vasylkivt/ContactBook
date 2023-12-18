@@ -5,7 +5,7 @@ import { List, ListWrap } from './ContactList.style';
 import { ContactItem, Filter, MoreDetailsForm, Notification } from 'components';
 
 import { useAuth, useContacts, useFilter } from 'hooks';
-import { contactsOperations } from 'redux/contacts';
+import { contactsOperations } from '/src/redux/contacts';
 
 export const ContactList = () => {
   const { contacts, loading, error, showModal } = useContacts();

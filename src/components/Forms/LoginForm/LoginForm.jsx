@@ -14,7 +14,7 @@ import {
 } from 'components';
 
 import { Input } from '../Input';
-import { authOperations } from 'redux/auth';
+import { authOperations } from '/src/redux/auth';
 import { scheme } from '../FormValidation';
 
 const schemeLogin = Yup.object().shape({

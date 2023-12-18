@@ -11,11 +11,11 @@ import {
   TelephoneIcon,
   Title,
 } from 'components';
-import { selectContacts } from 'redux/contacts/selectors';
+import { selectContacts } from '/src/redux/contacts/selectors';
 
-import { Input } from '../Input';
-import { contactsOperations } from 'redux/contacts';
+import { contactsOperations } from '/src/redux/contacts';
 import { isAlreadyOnList, scheme } from '../FormValidation';
+import { Input } from '../Input';
 
 const schemeLogin = Yup.object().shape({
   name: scheme.name,

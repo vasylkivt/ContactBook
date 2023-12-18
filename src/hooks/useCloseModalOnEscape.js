@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { closeModal } from 'redux/contacts/slice';
+import { closeModal } from '/src/redux/contacts/slice';
 
 export const useCloseModalOnEscape = dispatch => {
   useEffect(() => {

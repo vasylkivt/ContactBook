@@ -9,11 +9,11 @@ import {
   ButtonDel,
 } from './ContactItem.style';
 
-import { contactsOperations } from 'redux/contacts';
+import { contactsOperations } from '/src/redux/contacts';
 import { useContacts } from 'hooks';
 import { useDispatch } from 'react-redux';
 import { AiOutlineDelete } from 'react-icons/ai';
-import { openModal } from 'redux/contacts/slice';
+import { openModal } from '/src/redux/contacts/slice';
 
 export const ContactItem = ({ contact }) => {
   const dispatch = useDispatch();

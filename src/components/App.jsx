@@ -7,7 +7,7 @@ import { PrivateRoute, PublicRoute, SharedLayout } from 'components';
 
 import { useAuth } from 'hooks';
 import { toastOptions } from 'utils/toast';
-import { authOperations } from 'redux/auth';
+import { authOperations } from '/src/redux/auth';
 import ModalRefresh from './ModalRefresh/ModalRefresh';
 
 const HomeLazy = lazy(() => import('pages/Home'));

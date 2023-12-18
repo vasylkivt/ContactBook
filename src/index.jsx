@@ -1,14 +1,15 @@
+import 'modern-normalize';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import 'modern-normalize';
+import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import { App } from 'components';
 import { ThemeProvider } from 'styled-components';
-import { theme, GlobalStyle } from 'styles';
-import { persistor, store } from 'redux/store';
+import { GlobalStyle, theme } from './styles';
+
+import { persistor, store } from '/src/redux/store.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -22,5 +23,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </BrowserRouter>
       </Provider>
     </ThemeProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

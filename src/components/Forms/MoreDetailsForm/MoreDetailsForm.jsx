@@ -5,9 +5,9 @@ import { GrFormClose } from 'react-icons/gr';
 import { AiFillEdit } from 'react-icons/ai';
 import * as Yup from 'yup';
 
-import { closeModal } from 'redux/contacts/slice';
+import { closeModal } from '/src/redux/contacts/slice';
 import { useCloseModalOnEscape, useContacts } from 'hooks';
-import { contactsOperations } from 'redux/contacts';
+import { contactsOperations } from '/src/redux/contacts';
 
 import {
   ButtonClose,

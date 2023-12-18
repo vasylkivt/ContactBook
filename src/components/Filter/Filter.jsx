@@ -1,7 +1,8 @@
 import { useDispatch } from 'react-redux';
 
-import { setFilter } from 'redux/filter/slice';
 import { useFilter } from 'hooks';
+
+import { setFilter } from '/src/redux/filter/slice.js';
 
 import {
   BgFocus,
@@ -19,22 +20,20 @@ export const Filter = () => {
   const onChange = ({ target: { value } }) => dispatch(setFilter(value));
 
   return (
-    <>
-      <InputWrap>
-        <SearchIcon />
-        <Input
-          debounceTimeout={300}
-          value={filterValue}
-          onChange={onChange}
-          type="text"
-          required
-          autoComplete="off"
-          placeholder="&nbsp;"
-        />
-        <InputName>Find contacts</InputName>
+    <InputWrap>
+      <SearchIcon />
+      <Input
+        debounceTimeout={300}
+        value={filterValue}
+        onChange={onChange}
+        type="text"
+        required
+        autoComplete="off"
+        placeholder="&nbsp;"
+      />
+      <InputName>Find contacts</InputName>
 
-        <BgFocus></BgFocus>
-      </InputWrap>
-    </>
+      <BgFocus></BgFocus>
+    </InputWrap>
   );
 };

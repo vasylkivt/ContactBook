@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import {
   selectFilterValue,
   selectVisibleContacts,
-} from 'redux/filter/selectors';
+} from '/src/redux/filter/selectors';
 
 export const useFilter = () => {
   const filterValue = useSelector(selectFilterValue);

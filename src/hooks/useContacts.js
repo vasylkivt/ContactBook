@@ -6,7 +6,7 @@ import {
   selectEditedContact,
   selectError,
   selectLoading,
-} from 'redux/contacts/selectors';
+} from '/src/redux/contacts/selectors';
 
 export const useContacts = () => {
   const contacts = useSelector(selectContacts);

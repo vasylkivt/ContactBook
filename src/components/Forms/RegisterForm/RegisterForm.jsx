@@ -11,7 +11,7 @@ import {
   InvalidInput,
 } from 'components';
 import { useDispatch } from 'react-redux';
-import { authOperations } from 'redux/auth';
+import { authOperations } from '/src/redux/auth';
 import { Input } from '../Input';
 import { scheme } from '../FormValidation';
 
@@ -30,7 +30,7 @@ export const RegisterForm = () => {
         dispatch(
           authOperations.register({
             ...values,
-          })
+          }),
         );
       }}
       validationSchema={schemeRegister}
