@@ -3,6 +3,8 @@
 
 # ContactBook App
 
+![ContactBook Screenshot](./assets/ContactBook.webp)
+
 Welcome to ContactBook, the web app designed to help you effortlessly manage your contacts. Say goodbye to scattered notes and hello to an organized and user-friendly way of storing your contacts online. 📇💻
 
 ## Table of Contents
